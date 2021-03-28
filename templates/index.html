@@ -1,0 +1,277 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Template</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static ''%}assets/css/bootstrap.min.css">
+
+    <!-- External Css -->
+    <link rel="stylesheet" href="{% static ''%}assets/css/line-awesome.min.css">
+    <link rel="stylesheet" href="{% static ''%}assets/css/owl.carousel.min.css" />
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" type="text/css" href="{% static ''%}css/main.css">
+    <link rel="stylesheet" type="text/css" href="{% static ''%}css/job-1.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static '' %}images/favicon.png">
+    <link rel="apple-touch-icon" href="{% static '' %}images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static '' %}images/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static '' %}images/icon-114x114.png">
+
+
+  </head>
+  <body>
+
+    <div class="ugf-wrapper">
+      <div class="logo">
+        <!-- <img src="images/logo.png" class="img-fluid logo-white" alt="">
+        <img src="images/logo-dark.png" class="img-fluid logo-black" alt=""> -->
+        <h1>Logo</h1>
+      </div>
+      <div class="ugf-content-block">
+        <div class="content-block">
+          <h1>Think & DO</h1>
+          <p>Developing a website that allows businesses and companies to filter their current systems through to establish the likelihood of it transitioning to the cloud smoothly</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 offset-lg-7">
+            <div class="ufg-job-application-wrapper pt150">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span class="step-text"><span class="current-step"></span> of <span class="total-step"></span> completed</span></div>
+              </div>
+              <div class="form-steps active">
+                <h3>Personal information</h3>
+                <form action="" method="POST" class="job-application-form">
+                  {% csrf_token %}
+
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="Name" id="input-text" required>
+                    <label for="input-text">Name</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" name="Email" id="input-mail" required>
+                    <label for="input-mail">Email Addresss</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="number" name="Mobile_Number" class="form-control" id="input-pass" required>
+                    <label for="input-pass">Phone</label>
+                  </div>
+                  <div class="form-group check-gender">
+                    <span class="lebel-text">Select Gender</span>
+                    <div class="custom-radio">
+                      <input type="radio" name="Gender" class="custom-control-input" value="Male" id="male" required>
+                      <label class="custom-control-label" for="male">Male</label>
+                    </div>
+                    <div class="custom-radio">
+                      <input type="radio" name="Gender" class="custom-control-input" value="Female" id="female" required >
+                      <label class="custom-control-label" for="female">Female</label>
+                    </div>
+                  </div>
+                  <button class="btn step-btn">Next</button>
+
+              </div>
+              <!-- step 1 start -->
+              <div class="form-steps">
+
+                <a href="index.html" class="prev"><i class="las la-arrow-left"></i>Previous Step</a>
+                <h5 class="border-bottom c-mb-40" >How much does the business currently pay for any on-premise applications roughly?</h5>
+                <div class="job-application-form">
+                    <div class="form-group">
+                      <input type="number" class="form-control" name="Question_1" placeholder="Amount" required/>
+                    </div>
+                  <button class="btn step-btn">Next</button>
+                  </div>
+              </div>
+              <!-- step 1 end -->
+              <!-- step 2 start -->
+              <div class="form-steps">
+
+                <a href="index.html" class="prev"><i class="las la-arrow-left"></i>Previous Step</a>
+                <h5 class="border-bottom c-mb-40" >If on-premises applications are present<br> What is the planned budget for investing in any Cloud Applications for the business?</h5>
+                <div class="job-application-form">
+                    <div class="form-group">
+                      <input type="number" class="form-control" name="Question_2" placeholder="Amount" required/>
+                    </div>
+                  <button class="btn step-btn">Next</button>
+                  </div>
+              </div>
+              <!-- step 2 end -->
+              <!-- step 3 start -->
+
+                 <div class="form-steps">
+
+                  <a href="index.html" class="prev"><i class="las la-arrow-left"></i>Previous Step</a>
+                  <h5 class="border-bottom c-mb-40" >3.	Does the business have strict requirements for the level of security needed for the data being stored on the cloud? (Customer Data, Financial records, Health records)</h5>
+                  <div class="job-application-form">
+                    <div class="form-group radio-group">
+                      <div class="custom-radio">
+                        <input type="radio"  class="custom-control-input" value="agree" name="Question_3" id="agree" required>
+                        <label class="custom-control-label"  for="agree">Agree</label>
+                      </div>
+                    </div>
+                    <div class="form-group radio-group">
+                      <div class="custom-radio">
+                        <input type="radio"  class="custom-control-input" value="Disagree" name="Question_3" id="Disagree" required>
+                        <label class="custom-control-label" for="Disagree">Disagree </label>
+                      </div>
+                    </div>
+
+                    <div class="form-group radio-group">
+                      <div class="custom-radio">
+                        <input type="radio"  name="Question_3"  value="Notatall" class="custom-control-input" id="Notatall" required>
+                        <label class="custom-control-label" for="Notatall">Not at all </label>
+                      </div>
+                    </div>
+
+                    <button class="btn step-btn">Next</button>
+                  </div>
+                </div>
+              <!-- step 3 end -->
+              <!-- step 4 start -->
+
+                 <div class="form-steps">
+
+                  <a href="index.html" class="prev"><i class="las la-arrow-left"></i>Previous Step</a>
+                  <h5 >4.	Migrating legacy applications to the cloud can change the functionality and structure of a system</h5>
+                  <p class="border-bottom c-mb-40">Are you willing to adapt your current on-premise systems to prepare it for functionality with the cloud?</p>
+                  <div  class="job-application-form">
+                    <div class="form-group radio-group">
+                      <div class="custom-radio">
+                        <input type="radio"  class="custom-control-input" value="yes"  name="Question_4" id="4yes"  required>
+                        <label class="custom-control-label" for="4yes">Yes</label>
+                      </div>
+                    </div>
+                    <div class="form-group radio-group">
+                      <div class="custom-radio">
+                        <input type="radio"  class="custom-control-input" value="no"  name="Question_4" id="4no" required>
+                        <label class="custom-control-label" for="4no">No </label>
+                      </div>
+                    </div>
+
+
+
+                    <button class="btn step-btn">Next</button>
+                  </div>
+                </div>
+              <!-- step 4 end -->
+              <!-- step 5 start -->
+
+                 <div class="form-steps">
+
+                  <a href="index.html" class="prev"><i class="las la-arrow-left"></i>Previous Step</a>
+                  <h5 >4.	Migrating legacy applications to the cloud can change the functionality and structure of a system</h5>
+                  <p class="border-bottom c-mb-40">5.	Are there any other on-premises applications (Integration points) connected to the system that’s potentially being moved to the cloud? </p>
+                  <div class="job-application-form">
+                    <div class="form-group radio-group">
+
+                      <div class="custom-radio">
+                        <input type="radio" class="custom-control-input" value="1-5" name="Question_5" id="onetofive" required>
+                        <label class="custom-control-label" for="onetofive"> 1-5</label>
+                      </div>
+                    </div>
+                    <div class="form-group radio-group">
+                      <div class="custom-radio">
+                        <input type="radio"  class="custom-control-input" value="6-15" name="Question_5" id="fivetosix" required>
+                        <label class="custom-control-label" for="fivetosix">6-15 </label>
+                      </div>
+                    </div>
+                    <div class="form-group radio-group">
+                      <div class="custom-radio">
+                        <input type="radio" class="custom-control-input" value="16-29" name="Question_5" id="xd" required>
+                        <label class="custom-control-label" for="xd">16-29 </label>
+                      </div>
+                    </div>
+                    <div class="form-group radio-group">
+                      <div class="custom-radio">
+                        <input type="radio"  class="custom-control-input" value="30-50" name="Question_5" id="thrity" required>
+                        <label class="custom-control-label" for="thrity">30-50 </label>
+                      </div>
+                    </div>
+                    <div class="form-group radio-group">
+                      <div class="custom-radio">
+                        <input type="radio"  class="custom-control-input" value="None at all" name="Question_5" id="xnotall" required>
+                        <label class="custom-control-label" for="xnotall">None at all </label>
+                      </div>
+                    </div>
+
+
+
+                    <button class="btn step-btn">Next</button>
+                  </div>
+                </div>
+              <!-- step 5 end -->
+
+              <!-- step 6 start -->
+
+                 <div class="form-steps">
+
+                  <a href="index.html" class="prev"><i class="las la-arrow-left"></i>Previous Step</a>
+                  <h5 class="border-bottom c-mb-40">6.	Are there issues with the current systems that make it difficult to manage?</h5>
+
+                  <div class="job-application-form">
+                    <div class="form-group radio-group">
+
+                      <div class="custom-radio">
+                        <input type="radio"  class="custom-control-input" value="Yes" name="Question_6" id="rdyes" required>
+                        <label class="custom-control-label" for="rdyes"> Yes</label>
+                      </div>
+                    </div>
+                    <div class="form-group radio-group">
+                      <div class="custom-radio">
+                        <input type="radio"  class="custom-control-input" value="No" name="Question_6" id="rddno" required>
+                        <label class="custom-control-label" for="rddno"> No</label>
+                      </div>
+                    </div>
+
+
+
+                    <button type="submit" class="btn ">Submit</button>
+                  </form>
+                </div>
+              <!-- step 6 end -->
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="social-links">
+          <a href="#"><i class="lab la-facebook-f"></i></a>
+          <a href="#"><i class="lab la-twitter"></i></a>
+          <a href="#"><i class="lab la-linkedin-in"></i></a>
+          <a href="#"><i class="lab la-instagram"></i></a>
+        </div>
+        <div class="copyright">
+          <p>Copyright © 2021 RDS. All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static '' %}assets/js/jquery.min.js"></script>
+    <script src="{% static '' %}assets/js/popper.min.js"></script>
+    <script src="{% static '' %}assets/js/bootstrap.min.js"></script>
+
+    <script src="{% static '' %}js/custom.js"></script>
+  </body>
+
+</html>

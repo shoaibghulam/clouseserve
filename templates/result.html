@@ -1,0 +1,361 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Template</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static ''%}assets/css/bootstrap.min.css">
+
+    <!-- External Css -->
+    <link rel="stylesheet" href="{% static ''%}assets/css/line-awesome.min.css">
+    <link rel="stylesheet" href="{% static ''%}assets/css/owl.carousel.min.css" />
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" type="text/css" href="{% static ''%}css/main.css">
+    <link rel="stylesheet" type="text/css" href="{% static ''%}css/job-1.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.png">
+    <link rel="apple-touch-icon" href="{% static ''%}images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static ''%}images/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static ''%}images/icon-114x114.png">
+
+  <style>
+    .c-data{
+      width: 600px;
+    }
+    .c-btn{
+      padding: 6px 15px;
+    background: #01b681;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    border-radius: 5px;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    }
+    @media screen and (min-width: 1000px) {
+      .c-data{
+      width: auto;
+    }
+}
+.custom-box{
+  margin-top: 67px !important;
+  padding-bottom: 97px !important;
+    background: #FFF;
+    box-shadow: 16px 23px 33px -19px rgba(0,0,0,0.75);
+
+
+}
+  </style>
+  </head>
+  <body>
+
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mt-4  custom-box">
+            <div class="c-data">
+              <h3 class="text-center">Test Result</h3>
+               <p>PG.1</p>
+              <h5>Checklist: </h5>
+              <p>
+               <b>
+                 1.	Financially stable<br>
+               </b>
+               Allow for a well-financed cloud provider that is always having money fed back into it to prepare for any states of monetary hiccups the business may fall into over time.
+               <ul>
+                 <li>
+                  If the business is to go under, there may not be the finance to support accessing the cloud services via the business
+                 </li>
+                 <li>
+                  This could lead to further migration to a new cloud provider that can be time consuming and costly
+                 </li>
+               </ul>
+
+
+              </p>
+              <br>
+              <p>
+               <b> 2.	Research into the provider<br></b>
+                  It is always worth, before committing to a long-term relationship with someone, to do your research.
+                   <ul>
+                    <li>	When looking for the ideal cloud service provider a lot of things apply. For one, their current customers should be happy and able to recommend it. Look online for reviews from existing customers</li>
+                  <li>The provider you’re thinking of should be popular among its competitors in the market</li>
+
+                   </ul>
+
+              </p>
+              <br>
+              <p>
+               <b> 3.	The location of datacentres for the cloud provider<br></b>
+               For increased security of your cloud-based applications cloud providers allow for the option to allow geographical distribution of your data
+                   <ul>
+                    <li>The most secure and widely used servers are in Asia, Europe and America</li>
+                  <li>Having servers in multiple regions means if a region goes down there are others to rely on for 24/7 access to cloud applications</li>
+
+                   </ul>
+
+              </p>
+              <p>
+               <b> 4.	Standards of Cloud Security<br></b>
+               The exchanging of any data via the internet is to be end-to-end encrypted, this means the packets of data you are sending cannot be read in plain text by a potential hacker. This is imperative when dealing with sensitive customer data as a business.
+                   <ul>
+                    <li>-	The provider should always be encrypting data during the transfer to the cloud and within the server itself</li>
+                  <li>-	When the data is encrypted end-to-end the developer cannot even view a files content</li>
+
+                   </ul>
+                   It is worth checking the cloud provider you are interested in has been certified in its practise of safely storing the data of its clients (Your data)
+                   <ul>
+                    <li>	SSAE is the most common online auditing standard available for companies to have</li>
+                  <li>	By a cloud provider having an auditing standard, this verifies that the service has been certified for its safe practices of storing data</li>
+
+                   </ul>
+
+              </p>
+
+
+              <!-- pg2 start -->
+              <div class="mt-4">
+                <h5>pg 2.1</h5>
+
+              {% if obj.status4 == "True" or obj.status8 == "True" %}
+                <p>
+                1-5: This many integrated systems would allow for an environment that is reliable in connection speed as this is a relatively low figure for businesses first connecting to the cloud.
+                </p>
+
+              {% else %}
+              {% endif %}
+
+
+               {% if obj.status5 == "True" or obj.status8 == "True" %}
+                <p>
+                6-15: This number of integrated systems is likely to cause network latency and lag between environments as the limits of the businesses systems and cloud servers communications start to become apparent.
+                </p>
+
+              {% else %}
+              {% endif %}
+
+
+              {% if obj.status6 == "True" or obj.status7 == "True" or obj.status8 == "True"%}
+
+                <p>
+                16-29 / 30-50: These high figures would be cause for concern and the migration plan would likely have to be re thought-out as many cloud providers would struggle supporting so many different connected applications.
+
+                </p>
+
+              {% else %}
+              {% endif %}
+
+
+
+
+                <p  class="mt-4">
+                  It was found that any additional on-premises applications (Integration points) connected to the system that’s being moved to the cloud can make the transition to the cloud more complex. The study found that one participant had analysed a banking application from within their business to be potentially moved to the cloud but found over 50 integration points and resulted in it not being migrated to the cloud. These integration points are applications connected to the cloud structure that still run legacy applications. Although this is possible and you can have legacy systems integrated with a cloud structure it can cause latency and lag when both systems try to communicate with each other, reducing overall user experience. When an application that’s deployed to the cloud from a legacy system is still communicating with applications not in the same environment, it can lead to network latency issues.
+                </p>
+                <p  class="mt-4">
+                  Applications with fewer integrated systems attached to them have a much better chance of being able to migrate to the cloud. The more integration points in an application with other applications, the greater the latency between the two systems.
+                </p>
+                <p class="mt-4">
+                  It is important that during analysis of undergoing a legacy application migration, the number of applications the system interacts with should be recorded. As well as the location of these integrated applications, the frequency of communications between any integrated systems & the amount of bandwidth used when transferring data between the systems.
+
+                </p>
+              </div>
+              <!-- pg2 end -->
+              <!-- pg2.2 start -->
+
+              {% if obj.status1 == "True" or   obj.status3 == "True" %}
+
+               <div class="mt-4">
+                <h5>pg 2.2</h5>
+                <p  class="mt-4">
+                  The level of change required for recreating a legacy application in a cloud structure may determine if its eligible to be transferred to the cloud, if there appears to be no additional value is included in the work. From a business perspective, if the cost of reworking legacy systems to fit a cloud structure is additional with no apparent benefit it may be not be worth carrying out the transfer. The system would have the same capability as before being moved to the cloud, only technically working different. The best applications to be moved to the cloud are the applications that don’t require too much effort in repurposing to migrate to the cloud.
+                </p>
+                <p  class="mt-4">
+                  In the case that migrating your systems to the cloud requires rework and additional cost. It is worth working out how much this potential investment could benefit the business. <br>
+                  Provided is a ROT (Return on Investment) checklist that can be used as a tool for navigating a path to hosting on the cloud for anyone unsure of where to start.<br>
+                  When access to all of this information is present & all of the relevant information about business requirements / cloud providers has been collected. The business should be ready to decide on a Cloud provider that best suits the needs of the business. <br>
+                  By taking a step-by-step approach that is well informed and any queries along the way get answered by the provider, it will more likely result in a successful transition of the legacy business systems to the cloud.
+
+                </p>
+
+              </div>
+              <!-- pg2.2 end -->
+              <!-- pg2.3 start -->
+
+
+
+
+                   <!-- pg2.3 end -->
+              {% else %}
+              {% endif %}
+
+              {% if obj.status3 == "True" %}
+
+                 <!-- pg2.4 start -->
+              <div class="mt-4">
+                <h5>pg 2.4</h5>
+                <p  class="mt-4">
+                  It is typical for businesses to go over an arranged budget for migration to the cloud when a plan is first formulated. The business moving their applications to a SaaS (Software as a Service) model cloud structure is likely to see costs go up. However, if there are any extra costs to running a cloud structure for the business applications it can be weighed up using a ROI (Return on Investment) calculator or the steps provided in this website.
+
+                </p>
+                <p  class="mt-4">
+                  It is important that the overall costs are worked out using the previous steps of both the businesses before migrating and how much the cloud will cost the business in the long term. This study has shown that from experience, the initial costs of entry level cloud operations is low. However, inevitably operating a cloud application for a business to naturally grow will over the course of time will have higher requirements and specifications which can end up costing as much, if not more to run than the old systems.
+
+                </p>
+                <p  class="mt-4">
+                  Although this seems to be the more-than likely fate of moving to the cloud, its not without its benefits. These costs tie in with the business’s newfound capabilities and facilities because of what working a business from the cloud provides.
+                </p>
+
+              </div>
+
+              {% else %}
+              {% endif %}
+              <!-- pg2.4 end -->
+
+
+
+                       {% if obj.status2 == "True" %}
+
+              <div class="mt-4">
+                <h5>pg 2.3</h5>
+                <p  class="mt-4">
+                  How critical an applications data is, is a huge factor when considering moving a business application to the cloud.<br>
+                  This is because a lot of cloud providers may not have the capability to support such requirements. The ones that do have the capabilities will have a higher price point for using their cloud. Although the price may be higher it could be worth investing in depending on the current on-premises systems security for its sensitive data. This is because some cloud providers are capable of securing an application that are in compliance with GDPR regulations, this allows more trust in the business from customers. Not only this, but it could also be that the business must migrate to fit current regulatory compliance and governance of sensitive information laws. This information could include financial data, customer data and health records.
+
+                </p>
+                <p  class="mt-4">
+                  It could be that the on-premises security of sensitive data is up to a higher standard than any cloud provider could support on their systems. This could be down to how a business deals with its sensitive information traditionally that’s compatibility may not fit into a cloud structure.
+
+                </p>
+
+              </div>
+
+                       {% else %}
+                       {% endif %}
+
+
+
+
+
+
+
+
+            </div>
+             <!-- pg3.1 start -->
+
+            {% if obj.status1 == "True" %}
+             <div class="mt-4">
+              <h5>pg 3</h5>
+               <h5>Checklist for calculating ROI (Return on investment)</h5>
+               <p class="mt-4">
+                Step 1: Monitor requirements
+                <ul>
+                  <li>Have access to the costs of different cloud providers you are interested in, base this on the specific parts of your system you want on the cloud </li>
+                  <li>Monitor the businesses performance, capacity and availability and save it in a profile </li>
+                  <li>It could be worth using the businesses last year of history for these areas to collect a comprehensive profile</li>
+                  <li>Create a list of different security and performance requirements for your business based off these detailed profiles</li>
+                </ul>
+               </p>
+               <p> Step 2:
+                 <ul>
+                   <li>Have access to your businesses expenses and payment records for evaluating overall prices for different cloud vendors</li>
+                   <li>Pricing varies between cloud vendors as they all offer different pricing models </li>
+                   <li>Look for vendors that adhere to the business’s capability needs (Performance & Security)</li>
+                   <li>Price can depend on the CPU or Network Utilisation of the legacy application</li>
+                   <li>Be aware and keep an eye out for volume discounts offered</li>
+                   <li>If it appears that your business has strict performance requirements that cannot be supported by the cloud vendors you are interested in, it could mean that a dedicated environment may be necessary </li>
+                   <li>This can drive up the cost of migration by a lot as dedicated systems and processes have to be developed for the specific system to work with cloud operations </li>
+                 </ul>
+               </p>
+               <p>
+                Step 3: Total cost of ownership
+                <ul>
+                  <li>Utilise the easy-to-use, total cost of ownership calculators. </li>
+                  <li>Most of the top providers allow users to create their own cost model based on the profile that’s been created with the information about their business</li>
+                  <li>These models allow for specific details about a business, figuring things out such: as how much storage is required & how much bandwidth is predicted to be used</li>
+                </ul>
+               </p>
+               <p>
+                Step 4:
+                <ul>
+                  <li>Now that both the costs of moving to the cloud and staying on-premises applications have been explored, the data collected should be in a format that is suitable to be analysed in a spreadsheet </li>
+                  <li>The spreadsheet is to be set up to weigh out the costs of every scenario, this will enable a return figure to be calculated</li>
+
+                </ul>
+               </p>
+            </div>
+
+            {% else %}
+               {% endif %}
+            <!-- pg 3.1 end -->
+             <!-- pg 4 start -->
+
+
+             {% if obj.status9 == "True"  %}
+        <div class="mt-4">
+              <h5>pg 4</h5>
+          <p class="mt-4">
+            If there are any unsolved issues with the systems to be prepared for the cloud or if its difficult to manage and keep organised other arrangements may have to be made in the meantime as before any applications are to move to the cloud they have to be in a functioning, relatively organised state. This allows for a chosen cloud provider to have scope of the migration process and task at hand. Any issues would have to be solved by a specialist or technician in the field prior to presenting the business profile to a potential cloud provider.
+          </p>
+          <p class="mt-4 text-center">
+            <img src="{% static ''%}images/p4.jpeg" style="    width: 570px;
+            margin: auto 0;"/>
+          </p>
+
+
+          <p class="mt-4">
+            Looking up how popular the market it is your going into prior to investing is a good practise and how much demand there currently is for its services. This gives a good basis on the longevity of the investment and how long you can expect for it to keep benefitting you as a business.
+          </p>
+          <p class="text-center">
+            <a href="http://www.opengroup.org/cloud/cloud_for_business/p6.htm"/>Further information </a>
+          </p>
+            </div>
+            <!-- pg 4 end -->
+
+        </div>
+      </div>
+
+
+         {% else %}
+          {% endif %}
+
+
+      <div class="footer">
+        <div class="social-links">
+          <a href="#"><i class="lab la-facebook-f"></i></a>
+          <a href="#"><i class="lab la-twitter"></i></a>
+          <a href="#"><i class="lab la-linkedin-in"></i></a>
+          <a href="#"><i class="lab la-instagram"></i></a>
+        </div>
+        <div class="copyright">
+          <p>Copyright © 2021 RDS. All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static ''%}assets/js/jquery.min.js"></script>
+    <script src="{% static ''%}assets/js/popper.min.js"></script>
+    <script src="{% static ''%}assets/js/bootstrap.min.js"></script>
+
+    <script src="{% static ''%}js/custom.js"></script>
+  </body>
+
+</html>
